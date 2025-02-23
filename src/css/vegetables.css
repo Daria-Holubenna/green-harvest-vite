@@ -22,17 +22,14 @@
     line-height: 143%;
     color: #FBFBFB;
 }
-.vegetables-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
-    justify-content: center;
-}
+
 .vegetables-card {
     border-radius: 40px;
     background-color: #FBFBFB;
     padding: 32px 24px;
+}
+.vegetables-card:not(:last-child) {
+    margin-bottom: 20px;
 }
 .vegetables-card-title {
     font-weight: 600;
@@ -51,6 +48,7 @@
 }
 
 @media screen and (min-width: 768px) {
+    
     .wrapp-vegetables-title {
         max-width: 626px;
         margin-bottom: 52px;
@@ -65,12 +63,20 @@
         line-height: 125%;
     }
     .vegetables-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         row-gap: 28px;
         column-gap: 24px;
     }
+  
     .vegetables-card {
         width: calc((100% - 24px) / 2);
         padding: 32px 30px;
+    
+    }
+    .vegetables-card:not(:last-child) {
+        margin-bottom: 0;
     }
     .vegetables-price {
         font-size: 16px;
